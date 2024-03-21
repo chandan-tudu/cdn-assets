@@ -383,17 +383,20 @@ img {
     border-radius: var(--radius);
     color: var(--strong-text-color);
 }
+.entry-content pre[class*="language-"] {
+    border-radius: 0 !important;
+}
 .entry-content pre[class*="language-"] code {
     font-family: var(--code-font);
-    border-radius: 3px;
 }
 .entry-content .prism-titlename {
-    background: rgba(0, 0, 0, 0.1);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    background: #0d0e12;
+    border: 3px solid transparent;
+    border-bottom-color: #0b0b0f;
     padding: 5px 10px;
-    color: var(--light-color);
+    color: rgba(255, 255, 255, 0.7);
     font-family: var(--body-font);
-    font-weight: 700;
+    font-weight: 400;
     font-size: 0.9em;
     text-align: center;
 }
