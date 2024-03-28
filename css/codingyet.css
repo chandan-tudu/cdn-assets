@@ -1,3 +1,4 @@
+@charset "UTF-8";
 @import url("https://fonts.googleapis.com/css2?family=Noto+Emoji:wght@400..700&family=Roboto+Mono&family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Merriweather:ital,wght@0,300;0,400;1,400&display=swap");
 *,
@@ -286,13 +287,15 @@ img {
     max-width: var(--max-width);
     margin: 0 auto;
     display: flex;
+    flex-wrap: wrap;
     align-items: flex-start;
     gap: 20px;
     padding: var(--padding);
 }
 
 .site-main-wrapper,
-.sidebar {
+.sidebar,
+.single-commnet {
     background: var(--container-color);
     padding: var(--padding);
     border-radius: var(--radius);
@@ -301,12 +304,15 @@ img {
 }
 
 .site-main-wrapper {
-    width: 65%;
-    margin: 0 auto;
+    flex: 0 0 65%;
 }
 
 .sidebar {
     flex: 1;
+}
+
+.single-commnet {
+    flex: 0 0 65%;
 }
 
 @media (max-width: 950px) {
@@ -315,7 +321,8 @@ img {
         padding: 20px;
     }
     .site-main-wrapper,
-    .sidebar {
+    .sidebar,
+    .single-commnet {
         width: 100%;
         max-width: 740px;
         margin: 0 auto;
@@ -519,6 +526,112 @@ img {
 }
 .sidebar .related-post-item .post-img {
     margin: 10px 0;
+}
+
+.single-commnet {
+    /* Style for comment container */
+    /* Style for each individual comment */
+    /* Style for comment author */
+    /* Style for comment metadata */
+    /* Style for comment content */
+    /* Style for comment reply link */
+    /* Style for comment form */
+    /* Style for comment form inputs */
+    /* Style for comment form submit button */
+    /* Style for comment form submit button on hover */
+}
+.single-commnet .children,
+.single-commnet .comment-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.single-commnet .children {
+    margin-top: 20px;
+}
+.single-commnet .comment {
+    margin-bottom: 20px;
+    padding: 20px;
+    background-color: var(--light-color);
+    border: 1px solid rgba(17, 18, 24, 0.3);
+    border-radius: 5px;
+    font-size: 16px;
+}
+.single-commnet .comment .comment-author {
+    font-weight: bold;
+}
+.single-commnet .comment .comment-author img {
+    border-radius: 2px;
+    overflow: hidden;
+    margin-right: 3px;
+}
+.single-commnet .comment .comment-metadata {
+    color: #666;
+}
+.single-commnet .comment .comment-content {
+    margin-top: 10px;
+}
+.single-commnet .comment .comment-reply-link {
+    color: var(--dark-color);
+    text-decoration: none;
+}
+.single-commnet .comment .comment-reply-link::before {
+    content: "↩️";
+    margin-right: 2px;
+}
+.single-commnet #cancel-comment-reply-link {
+    margin-left: 5px;
+    background: rgba(17, 18, 24, 0.05);
+    border: 1px solid rgba(17, 18, 24, 0.1);
+    color: var(--strong-text-color);
+    text-decoration: none;
+    display: inline-block;
+    padding: 5px 10px;
+    font-family: var(--body-font);
+    font-weight: 400;
+    border-radius: 3px;
+    font-size: 0.9em;
+    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+        rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+}
+.single-commnet #commentform {
+    margin-top: 20px;
+}
+.single-commnet #commentform input[type="text"],
+.single-commnet #commentform input[type="email"],
+.single-commnet #commentform textarea {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid rgba(17, 18, 24, 0.5);
+    border-radius: 3px;
+    font-family: var(--body-font);
+    font-size: 1em;
+    outline: none;
+}
+.single-commnet #commentform textarea {
+    resize: vertical;
+}
+.single-commnet #commentform input[type="text"]:is(:hover, :focus),
+.single-commnet #commentform input[type="email"]:is(:hover, :focus),
+.single-commnet #commentform textarea:is(:hover, :focus) {
+    outline: 2px solid var(--dark-color);
+    border-color: rgba(17, 18, 24, 0.1);
+}
+.single-commnet #commentform input[type="submit"] {
+    background-color: var(--dark-color);
+    box-shadow: rgba(27, 31, 35, 0.04) 0 1px 0,
+        rgba(255, 255, 255, 0.25) 0 1px 0 inset;
+    opacity: 0.9;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+.single-commnet #commentform input[type="submit"]:hover {
+    opacity: 1;
 }
 
 .site-footer {
