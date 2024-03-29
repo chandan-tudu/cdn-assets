@@ -63,7 +63,7 @@ pre[class*="language-"] {
 .token.comment,
 .token.prolog {
     /* color: #69676c; */
-    color: #858085;
+    color: #a19fa3;
     border: none;
     padding-left: 0;
     font-style: italic;
@@ -72,14 +72,14 @@ pre[class*="language-"] {
 .token.operator.colon,
 .token.punctuation,
 .token.tag .token.punctuation {
-    color: #8b888f;
+    color: #a09ea3;
 }
 .token.doctype-tag,
 .token.tag {
-    color: #fc618d;
+    color: #fc789e;
 }
 .token.selector {
-    color: #fc618d;
+    color: #fc789e;
 }
 .token.pseudo-element {
     color: #5ad4e6;
@@ -90,7 +90,7 @@ pre[class*="language-"] {
 .token.number,
 .token.property,
 .token.symbol {
-    color: #948ae3;
+    color: #a198e6;
 }
 .token.constant {
     color: #5ad4e6;
@@ -112,16 +112,16 @@ pre[class*="language-"] {
     color: #fce566;
 }
 .token.operator {
-    color: #fc618d;
+    color: #fc789e;
 }
 .token.rule {
-    color: #fc618d;
+    color: #fc789e;
 }
 .token.atrule {
     color: #5ad4e6;
 }
 .token.keyword {
-    color: #fc618d;
+    color: #fc789e;
 }
 .token.function {
     color: #7bd88f;
@@ -136,13 +136,13 @@ pre[class*="language-"] {
 }
 .token.regex-delimiter,
 .token.regex-flags {
-    color: #fc618d;
+    color: #fc789e;
 }
 .token.regex-source {
     color: #f7f1ff;
 }
 .token.important {
-    color: #fc618d;
+    color: #fc789e;
 }
 .token.entity {
     cursor: help;
@@ -155,7 +155,7 @@ pre[class*="language-"] {
     color: #f7f1ff;
 }
 .token.unit {
-    color: #fc618d;
+    color: #fc789e;
 }
 .token.class-name {
     color: #7bd88f;
@@ -178,7 +178,7 @@ pre[class*="language-"] {
 .token.brackets,
 .token.interpolation-punctuation.punctuation,
 .token.template-punctuation {
-    color: #fc618d;
+    color: #fc789e;
 }
 .language-markup .id-attr-name + .token.attr-value,
 .language-php .id-attr-name + .token.attr-value,
@@ -224,7 +224,7 @@ pre[class*="language-"] {
 }
 .language-php .token.constant,
 .token.language-php .token.constant {
-    color: #948ae3;
+    color: #a198e6;
 }
 .language-sql .token.brackets,
 .token.language-sql .token.brackets {
