@@ -62,7 +62,8 @@ pre[class*="language-"] {
 .token.cdata,
 .token.comment,
 .token.prolog {
-    color: #69676c;
+    /* color: #69676c; */
+    color: #a19fa3;
     border: none;
     padding-left: 0;
     font-style: italic;
