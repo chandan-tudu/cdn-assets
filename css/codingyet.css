@@ -423,6 +423,7 @@ img {
 }
 .entry-content .border {
     box-shadow: 0 0 0 40px var(--light-color);
+    background-color: var(--light-color);
     margin: 60px 0;
 }
 .entry-content .border img {
