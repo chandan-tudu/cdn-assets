@@ -377,6 +377,7 @@ img {
   font-size: 17px !important;
   outline: none;
   white-space: pre-wrap !important;
+  word-break: break-word !important;
 }
 .entry-content pre:not([class*=language-]) {
   padding: 0;
@@ -397,7 +398,6 @@ img {
 }
 .entry-content pre[class*=language-] code {
   font-family: var(--code-font);
-  word-break: break-all !important;
   font-size: 16px !important;
 }
 .entry-content .prism-titlename {
