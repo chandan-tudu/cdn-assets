@@ -50,11 +50,13 @@ code[class*=language-] ::selection {
   font-family: monospace, "Cascadia Code";
 }
 
-.token.doctype .token.punctuation,
-.token.operator.colon,
-.token.punctuation,
-.token.tag .token.punctuation {
+.token.operator.colon {
   color: #f7f1ff;
+}
+
+.token.tag .token.punctuation,
+.token.punctuation {
+  color: #ABABAB;
 }
 
 .token.doctype-tag,
