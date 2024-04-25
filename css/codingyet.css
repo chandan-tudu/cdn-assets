@@ -365,51 +365,23 @@ img {
   color: #000;
   font-weight: 400;
 }
-.entry-content pre {
-  padding: 0;
-  overflow: visible;
-  border: 5px solid #ddd;
-  outline: none;
-}
-.entry-content pre code {
+.entry-content pre.wp-block-code {
+  background-color: #f4f4f4;
   padding: 20px;
-  overflow-x: auto;
-  font-size: 17px !important;
-  outline: none;
-  white-space: pre-wrap !important;
-  word-break: break-word !important;
+  border-radius: 5px;
+  overflow-x: auto; /* Enable horizontal scrolling if needed */
+}
+.entry-content pre.wp-block-code code {
+  font-family: var(--mono-font), monospace;
+  font-size: 16px;
+  color: #333;
+  white-space: pre-wrap; /* Preserve line breaks */
 }
 .entry-content pre:not([class*=language-]) {
-  padding: 0;
-  overflow: visible;
-  background: none;
-  vertical-align: middle;
-}
-.entry-content pre:not([class*=language-]) code {
-  word-break: normal !important;
-  padding: 15px 20px;
-  overflow-x: auto;
-  background: var(--light-color);
-  border-radius: var(--radius);
-  color: var(--strong-text-color);
+  border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .entry-content pre[class*=language-] {
-  border: 0 !important;
-}
-.entry-content pre[class*=language-] code {
-  font-family: var(--code-font);
-  font-size: 15px !important;
-}
-.entry-content .prism-titlename {
-  background: rgba(17, 18, 24, 0.3);
-  border: 1px solid transparent;
-  border-bottom-color: rgba(255, 255, 255, 0.1);
-  padding: 10px;
-  color: rgba(255, 255, 255, 0.7);
-  font-family: var(--body-font);
-  font-weight: 400;
-  text-align: center;
-  font-size: 16px;
+  background: #111218 !important;
 }
 .entry-content .wp-element-button strong {
   color: inherit;
@@ -452,11 +424,8 @@ img {
   .site-main-wrapper h3 {
     font-size: 1.3rem;
   }
-  .entry-content pre code {
-    font-size: 15px !important;
-  }
-  pre[class*=language-] code {
-    font-size: 15px;
+  .entry-content pre.wp-block-code code {
+    font-size: 14px;
   }
 }
 .entry-header .entry-meta {

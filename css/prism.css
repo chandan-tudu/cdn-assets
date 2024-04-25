@@ -1,15 +1,9 @@
 @import url(https://cdn.jsdelivr.net/gh/chandan-tudu/cascadia-code@master/style.min.css);
-pre[class*=language-] code {
-  padding-left: 0;
-  overflow-x: auto;
-  font-family: monospace, "Cascadia Code";
-}
-
 code[class*=language-],
 pre[class*=language-] {
-  color: #f7f1ff;
-  background: 0 0;
-  font-family: monospace, "Cascadia Code", "Fira Code", Consolas, Menlo, Monaco, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier;
+  color: #f7f1ff !important;
+  font-family: "Cascadia Code", monospace !important;
+  font-weight: 300;
   line-height: 1.5;
   text-align: left;
   white-space: pre;
@@ -21,62 +15,39 @@ pre[class*=language-] {
   tab-size: 4;
   -webkit-hyphens: none;
   hyphens: none;
-  font-weight: 300;
 }
 
-code[class*=language-] ::-moz-selection,
-code[class*=language-]::-moz-selection,
-pre[class*=language-] ::-moz-selection,
-pre[class*=language-]::-moz-selection {
+pre[class*=language-]::-moz-selection, pre[class*=language-] ::-moz-selection, code[class*=language-]::-moz-selection, code[class*=language-] ::-moz-selection {
   text-shadow: none;
-  background: rgba(255, 255, 255, 0.2);
-  color: inherit;
+  background: #d84315;
+  color: #fff;
 }
 
-code[class*=language-] ::-moz-selection, code[class*=language-]::-moz-selection, pre[class*=language-] ::-moz-selection, pre[class*=language-]::-moz-selection {
-  text-shadow: none;
-  background: rgba(255, 255, 255, 0.2);
-  color: inherit;
-}
-
-code[class*=language-] ::selection,
-code[class*=language-]::selection,
+pre[class*=language-]::selection,
 pre[class*=language-] ::selection,
-pre[class*=language-]::selection {
+code[class*=language-]::selection,
+code[class*=language-] ::selection {
   text-shadow: none;
-  background: rgba(255, 255, 255, 0.2);
-  color: inherit;
+  background: #d84315;
+  color: #fff;
 }
 
-pre.wp-block-code[class*=language-] {
-  background: #111218;
-  padding: 0;
-  margin: 0.5em auto;
-  overflow: auto;
-  border-radius: 5px !important;
+@media print {
+  code[class*=language-],
+  pre[class*=language-] {
+    text-shadow: none;
+  }
 }
-
-pre.wp-block-code[class*=language-] code {
-  color: #f7f1ff;
-}
-
-code[class*=language-] {
-  padding: 1em 1.5em 1.3em !important;
-}
-
-pre[class*=language-] {
-  padding: 0 !important;
-  margin-top: 1.7rem !important;
-  margin-bottom: 1.7rem !important;
-}
-
+/* Code blocks */
+/* mkaz: require to override twentynineteen */
 .token.cdata,
 .token.comment,
 .token.prolog {
   /* color: #69676c; */
-  color: #a19fa3;
+  color: #818085;
   border: none;
   padding-left: 0;
+  font-family: monospace, "Cascadia Code";
 }
 
 .token.doctype .token.punctuation,
@@ -88,16 +59,17 @@ pre[class*=language-] {
 
 .token.doctype-tag,
 .token.tag {
-  color: #fc789e;
+  color: #ff7598;
 }
 
 .token.selector {
-  color: #fc789e;
+  color: #ff7598;
 }
 
 .token.pseudo-element {
   color: #5ad4e6;
   font-style: italic;
+  font-feature-settings: "calt", "ss01";
 }
 
 .token.boolean,
@@ -132,11 +104,11 @@ pre[class*=language-] {
 }
 
 .token.operator {
-  color: #fc789e;
+  color: #ff7598;
 }
 
 .token.rule {
-  color: #fc789e;
+  color: #ff7598;
 }
 
 .token.atrule {
@@ -144,7 +116,7 @@ pre[class*=language-] {
 }
 
 .token.keyword {
-  color: #fc789e;
+  color: #ff7598;
 }
 
 .token.keyword.nil {
@@ -168,7 +140,7 @@ pre[class*=language-] {
 
 .token.regex-delimiter,
 .token.regex-flags {
-  color: #fc789e;
+  color: #ff7598;
 }
 
 .token.regex-source {
@@ -176,7 +148,7 @@ pre[class*=language-] {
 }
 
 .token.important {
-  color: #fc789e;
+  color: #ff7598;
 }
 
 .token.entity {
@@ -193,7 +165,7 @@ pre[class*=language-] {
 }
 
 .token.unit {
-  color: #fc789e;
+  color: #ff7598;
 }
 
 .token.class-name {
@@ -230,7 +202,7 @@ pre[class*=language-] {
 .token.brackets,
 .token.interpolation-punctuation.punctuation,
 .token.template-punctuation {
-  color: #fc789e;
+  color: #ff7598;
 }
 
 .language-markup .id-attr-name + .token.attr-value,
@@ -313,4 +285,54 @@ pre[class*=language-] {
 
 .language-jsx .token.tag .token.attr-name {
   color: #7bd88f;
+}
+
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+  position: relative;
+  /* Padding can be tweaked by themes, but if top padding is off
+  /* the line numbers don't align with the row. */
+  padding-top: 0 !important;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em; /* works for line-numbers below 1000 lines */
+  letter-spacing: -1px;
+  border-right: 0;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  user-select: none;
+}
+
+.line-numbers-rows > span {
+  pointer-events: none;
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #5c6370;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+.prism-titlename {
+  margin: -16px -16px 24px -16px;
+  padding: 4px 16px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif;
+  font-weight: 700;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.1);
 }
