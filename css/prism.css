@@ -2,14 +2,14 @@
 pre[class*=language-] code {
   padding-left: 0;
   overflow-x: auto;
-  font-family: "Cascadia Code";
+  font-family: monospace, "Cascadia Code";
 }
 
 code[class*=language-],
 pre[class*=language-] {
   color: #f7f1ff;
   background: 0 0;
-  font-family: "Cascadia Code", "Fira Code", Consolas, Menlo, Monaco, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier, monospace;
+  font-family: monospace, "Cascadia Code", "Fira Code", Consolas, Menlo, Monaco, "Andale Mono", "Lucida Console", "Lucida Sans Typewriter", "DejaVu Sans Mono", "Bitstream Vera Sans Mono", "Liberation Mono", "Nimbus Mono L", "Courier New", Courier;
   line-height: 1.5;
   text-align: left;
   white-space: pre;

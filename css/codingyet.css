@@ -398,7 +398,7 @@ img {
 }
 .entry-content pre[class*=language-] code {
   font-family: var(--code-font);
-  font-size: 16px !important;
+  font-size: 15px !important;
 }
 .entry-content .prism-titlename {
   background: rgba(17, 18, 24, 0.3);
