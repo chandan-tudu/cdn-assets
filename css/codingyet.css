@@ -381,7 +381,7 @@ img {
   border: 1px solid rgba(0, 0, 0, 0.2);
 }
 .entry-content pre[class*=language-] {
-  background: #111218 !important;
+  background: #111218 !important; /*Prism BG*/
 }
 .entry-content .wp-element-button strong {
   color: inherit;
