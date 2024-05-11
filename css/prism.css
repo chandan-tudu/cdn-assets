@@ -1,7 +1,7 @@
-@import url(https://cdn.jsdelivr.net/gh/chandan-tudu/cascadia-code@master/style.min.css);
+@import url("https://cdn.jsdelivr.net/gh/chandan-tudu/cascadia-code@master/style.min.css");
 code[class*=language-],
 pre[class*=language-] {
-  color: #f7f1ff !important;
+  color: #fdf9f3 !important;
   font-family: "Cascadia Code", monospace !important;
   font-weight: 300;
   line-height: 1.5;
@@ -47,7 +47,8 @@ code[class*=language-] ::selection {
   color: #818085;
   border: none;
   padding-left: 0;
-  font-family: monospace, "Cascadia Code";
+  font-family: "Cascadia Code" monospace;
+  font-style: italic;
 }
 
 .token.operator.colon {
@@ -56,7 +57,7 @@ code[class*=language-] ::selection {
 
 .token.tag .token.punctuation,
 .token.punctuation {
-  color: #ABABAB;
+  color: #ababab;
 }
 
 .token.doctype-tag,
@@ -119,6 +120,13 @@ code[class*=language-] ::selection {
 
 .token.keyword {
   color: #ff7598;
+}
+
+.token.keyword:not(:is(.null, .nil, .control-flow)) {
+  color: #5ad4e6;
+  font-style: italic;
+  font-family: "Cascadia Code", monospace !important;
+  font-feature-settings: "calt", "ss01";
 }
 
 .token.keyword.nil {
@@ -197,8 +205,6 @@ code[class*=language-] ::selection {
 .token.let-keyword,
 .token.var-keyword {
   color: #5ad4e6;
-  font-style: italic;
-  font-feature-settings: "calt", "ss01";
 }
 
 .token.brackets,
@@ -289,6 +295,17 @@ code[class*=language-] ::selection {
   color: #7bd88f;
 }
 
+.token.console,
+.token.property-access {
+  color: #fdf9f3;
+}
+
+.token.module {
+  color: #ff7598 !important;
+  font-style: normal !important;
+  font-feature-settings: unset !important;
+}
+
 pre.line-numbers {
   position: relative;
   padding-left: 3.8em;
@@ -297,8 +314,6 @@ pre.line-numbers {
 
 pre.line-numbers > code {
   position: relative;
-  /* Padding can be tweaked by themes, but if top padding is off
-  /* the line numbers don't align with the row. */
   padding-top: 0 !important;
 }
 
